@@ -50,7 +50,7 @@ const move200 = (vehicle) => {
 }
 ```
 
-But imagine if you refactored the `Car`, `Plane` and `Skateboard` to all have a `move` method.  You could rewrite `move_200` as:
+But imagine if you refactored the `Car`, `Plane` and `Skateboard` to all have a `move` method.  You could rewrite `move200` as:
 
 ```js
 const move200 = (vehicle) => {
