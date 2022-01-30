@@ -23,7 +23,7 @@ npm install
 Here's some code that moves objects:
 
 ```js
-const move200 = (vehicle) => {
+function move200(vehicle) {
   if (vehicle instanceof Car) {
     vehicle.drive(200)
   } else if (vehicle instanceof Plane) {
@@ -39,7 +39,7 @@ How would you add a `Skateboard` class?
 You might do this:
 
 ```js
-const move200 = (vehicle) => {
+function move200(vehicle) {
   if (vehicle instanceof Car) {
     vehicle.drive(200)
   } else if (vehicle instanceof Plane) {
@@ -53,7 +53,7 @@ const move200 = (vehicle) => {
 But imagine if you refactored the `Car`, `Plane` and `Skateboard` to all have a `move` method.  You could rewrite `move200` as:
 
 ```js
-const move200 = (vehicle) => {
+function move200(vehicle) {
   vehicle.move(200)
 }
 ```
@@ -61,6 +61,8 @@ const move200 = (vehicle) => {
 The `Car`, `Plane` and `Skateboard` are now treated polymorphicly as just "vehicles".
 
 ### Duck typing
+
+> Duck typing in computer programming is an application of the duck test—"If it walks like a duck and it quacks like a duck, then it must be a duck"—to determine whether an object can be used for a particular purpose. With nominative typing, an object is of a given type if it is declared to be (or if a type's association with the object is inferred through mechanisms such as object inheritance). In duck typing, an object is of a given type if it has all methods and properties required by that type.
 
 How does the code above relate to duck typing?
 
@@ -83,6 +85,8 @@ assertionList.checkAll()
 You job is to simplify the code by making it polymorphic.
 
 There are tests to help you refactor the code.  To make the refactoring easier, the tests are currently focused on the `AssertionList`.  Depending on the changes you make, you may be able to leave these tests unchanged, or you may need to change them slightly.
+
+If you need a hint, check the `hints.md` file.
 
 ### Run the tests
 
